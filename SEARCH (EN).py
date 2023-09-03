@@ -5,7 +5,7 @@ from tqdm import tqdm
 # Link Discord : https://discord.gg/q6FkGCHv66                        
 
 # Set the folder paths you want to search in
-folder_paths = ['F:\eare t\e1text (main source)']
+folder_paths = [r'F:\Folder1\Raw text']
 
 # Input the keyword to search for
 keyword = input("Enter the keyword to search for: ")
