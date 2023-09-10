@@ -1,6 +1,13 @@
 import os
-import re  # You need to import this for re.split
-from tqdm import tqdm
+import re
+import subprocess  # Import subprocess library
+
+try:
+    from tqdm import tqdm
+except ImportError:
+    print("tqdm not found! Installing now...")
+    subprocess.check_call(["pip", "install", "tqdm"])
+    from tqdm import tqdm
 
 # This function is used for natural sorting
 def atoi(text):
@@ -14,10 +21,9 @@ def natural_keys(text):
 # Link Discord : https://discord.gg/q6FkGCHv66
 
 # Set the folder paths you want to search in
-# F:\FOLDER\TEXTFLIE
 folder_paths = [r'F:\SUMMER ALL TRANSLATE\All monob plus level']
 
-while True:  # This loop will allow the user to keep searching
+while True:
     keyword = input("Enter the keyword to search for: ")
 
     found = False
