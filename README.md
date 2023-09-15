@@ -1,6 +1,8 @@
-# SEARCH_EN.PY
-For search match word in file.txt
+# Python version 3.11.5
+# Code from ChatGPT
+# Made By Bank's : Thai translator H Game
+# Link Discord : https://discord.gg/q6FkGCHv66
+# สามารถหาคำไทยได้แต่ต้องรันโค้ดผ่านโปรแกรมรันโค้ด เช่น Visual Studio Code
 
-Set the folder paths you want to search in First.
-
-Edit it with notepad.
+# How to use
+# Just input Folder paths and input the keyword that you want to search and input File Extension
