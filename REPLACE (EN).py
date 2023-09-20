@@ -41,17 +41,18 @@ print("Code from ChatGPT")
 print("Made By Bank's : Thai translator H Game")
 print("Link Discord : https://discord.gg/q6FkGCHv66")
 print("สามารถหาคำไทยได้แต่ต้องรันโค้ดผ่านโปรแกรมรันโค้ด เช่น Visual Studio Code")
-
+print("")
 print("How to use")
 print("Just input Folder paths, the keyword you want to search, the replacement keyword, and the file extension.")
 print("No need to edit the folder address in the code, you can run the program and use it right away.")
-
+print("")
 print("วิธีใช้")
 print("เพียงป้อนตำแหน่งของโฟลเดอร์ คำที่ต้องการค้นหา คำที่อยากจะให้แก้ และนามสกุลของไฟล์นั้น ๆ ")
 print("ไม่ต้องแก้ที่อยู่โฟลเดอร์ในโค้ดแล้วสามารถรันโปรแกรมแล้วใช้งานได้เลย")
-
+print("")
 print("Please set all Foler name to english first")
 print("Enter the folder paths you want to search in. Type 'done' when finished:")
+print("")
 
 def to_raw_string(s):
     return s.encode('unicode_escape').decode()
