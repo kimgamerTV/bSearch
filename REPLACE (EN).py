@@ -51,8 +51,6 @@ print("เพียงป้อนตำแหน่งของโฟลเด�
 print("ไม่ต้องแก้ที่อยู่โฟลเดอร์ในโค้ดแล้วสามารถรันโปรแกรมแล้วใช้งานได้เลย")
 print("")
 print("Please set all Foler name to english first")
-print("Enter the folder paths you want to search in. Type 'done' when finished:")
-print("")
 
 def to_raw_string(s):
     return s.encode('unicode_escape').decode()
