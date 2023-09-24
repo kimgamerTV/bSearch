@@ -59,10 +59,26 @@ def to_raw_string(s):
 
 while True:
     path = input("Enter folder path (or 'done' to finish): ")
-    if path.lower() == 'done':
+    # Check if user hasn't added any paths yet and tries to exit
+    if path.lower() == 'done' and not folder_paths:
+        print("You haven't added any folder paths yet. Please add at least one folder path.")
+        continue
+    elif path.lower() == 'done':
         break
-    folder_paths.append(to_raw_string(path))
-
+    
+    raw_path = to_raw_string(path)
+    
+    if not os.path.exists(raw_path):
+        print("The provided path does not exist. Please enter a valid folder path.")
+        continue
+    
+    # Check if path has already been added
+    if raw_path in folder_paths:
+        print("You have already added this folder path. Please add a different one.")
+        continue
+    
+    folder_paths.append(raw_path)
+    
 while True:
     keyword = input("Enter the keyword to search for: ")
     replace_keyword = input(f"Enter the keyword to replace '{keyword}' with: ")
@@ -92,13 +108,31 @@ while True:
     # Sorting the matching files naturally
     matching_files = sorted(matching_files, key=lambda x: natural_keys(os.path.basename(x)))
     
-    for match in matching_files:
-        _, filename = os.path.split(match)
-        print(f"The keyword '{keyword}' was found and replaced in the file: {filename}")
+    choice = input("Do you want to search again? If you want to change the folder paths, type 'change'. (yes/no/change): ").lower()
+    
+    if choice == 'change':
+        folder_paths = []
+        print("Please set all Folder names to English first.")
+        print("Enter the folder paths you want to search in. Type 'done' when finished:")
+        
+        while True:
+            path = input("Enter folder path (or 'done' to finish): ")
+            
+            if path.lower() == 'done' and folder_paths:
+                break
+            elif path.lower() == 'done' and not folder_paths:
+                print("You haven't entered any folder paths yet!")
+                continue
+            
+            raw_path = to_raw_string(path)
+            if not os.path.exists(raw_path):
+                print("The provided path does not exist. Please enter a valid folder path.")
+                continue
+            if raw_path in folder_paths:
+                print("You've already added this folder path. Please add a different one.")
+                continue
 
-    if not matching_files:
-        print(f"\nThe keyword '{keyword}' was not found in any {file_extension} file.")
+            folder_paths.append(raw_path)
 
-    choice = input("Do you want to search and replace again? (yes/no): ").lower()
-    if choice != 'yes':
-        break
+    elif choice != 'yes':
+        sys.exit()
