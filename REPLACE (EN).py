@@ -106,7 +106,7 @@ while True:
                 f.write(new_content)
 
     # Sorting the matching files naturally
-    matching_files = sorted(matching_files, key=lambda x: natural_keys(os.path.basename(x)))
+    matching_files = sorted(tqdm(matching_files, desc="Sorting files", unit="file"), key=lambda x: natural_keys(os.path.basename(x)))
     
     choice = input("Do you want to search again? If you want to change the folder paths, type 'change'. (yes/no/change): ").lower()
     
