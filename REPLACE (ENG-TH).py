@@ -106,6 +106,31 @@ while True:
     # Sorting the matching files naturally
     matching_files = sorted(tqdm(matching_files, desc="Sorting files", unit="file"), key=lambda x: natural_keys(os.path.basename(x)))
     
+    for match in matching_files:
+        _, filename = os.path.split(match)
+        print(f"The keyword '{keyword}' was replace with '{replace_keyword}' in the file: {filename}")
+
+    if not matching_files:
+        print(f"\nThe keyword '{keyword}' was not found in any .{file_extension} file.")
+    else:
+        open_choice = input("Do you want to open any of the matched files? (yes/no): ").lower()
+
+        if open_choice == 'yes':
+            while True:
+                filename_to_open = input("Enter the name of the file you want to open, 'all' to open all, or 'done' to finish: ")
+        
+                if filename_to_open.lower() == 'done':
+                    break
+
+                if filename_to_open.lower() == 'all':
+                    for match in matching_files:
+                        os.system(f'start "" "{match}"')  # Notice the extra quotes
+                    break
+                
+                for match in matching_files:
+                    if filename_to_open in os.path.basename(match):
+                        os.system(f'start "" "{match}"')  # Notice the extra quotes
+    
     choice = input("Do you want to search again? If you want to change the folder paths, type 'change'. (yes/no/change): ").lower()
     
     if choice == 'change':
