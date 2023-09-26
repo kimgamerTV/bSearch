@@ -10,7 +10,7 @@ import subprocess
 # สามารถหาคำไทยได้แต่ต้องรันโค้ดผ่านโปรแกรมรันโค้ด เช่น Visual Studio Code
 
 # How to use
-# Just input Folder paths, the keyword you want to search, the replacement keyword, and the file extension
+# Just input Folder paths, the keyword you want to search, and the file extension
 # No need to edit the folder address in the code, you can run the program and use it right away.
 
 # วิธีใช้
