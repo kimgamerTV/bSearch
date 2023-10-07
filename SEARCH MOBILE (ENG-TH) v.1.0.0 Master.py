@@ -28,6 +28,10 @@ def atoi(text):
 def natural_keys(text):
     return [atoi(c) for c in re.split(r'(\d+)', text)]
 
+# Convert folder path to raw string
+def to_raw_string(s):
+    return s.encode('unicode_escape').decode()
+
 # Check if tqdm is installed, and if not, install it
 try:
     from tqdm import tqdm
@@ -35,10 +39,6 @@ except ImportError:
     print("tqdm not found! Installing tqdm...")
     subprocess.run([sys.executable, "-m", "pip", "install", "tqdm"])
     from tqdm import tqdm
-
-# Convert folder path to raw string
-def to_raw_string(s):
-    return s.encode('unicode_escape').decode()
     
 # No need to edit the folder address in the code, you can run the program and use it right away.
 # ไม่ต้องแก้ที่อยู่โฟลเดอร์ในโค้ดแล้วสามารถรันโปรแกรมแล้วใช้งานได้เลย
@@ -65,9 +65,6 @@ print("ไม่ต้องแก้ที่อยู่โฟลเดอร�
 print("")
 print("Please set all Folder names to English first.")
 print("Enter the folder paths you want to search in. Type 'done' when finished:")
-
-def to_raw_string(s):
-    return s.encode('unicode_escape').decode()
 
 while True:
     path = input("Enter folder path (or 'done' to finish): ")
