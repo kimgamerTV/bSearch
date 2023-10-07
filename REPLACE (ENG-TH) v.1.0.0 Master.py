@@ -14,7 +14,7 @@ import subprocess
 # No need to edit the folder address in the code, you can run the program and use it right away.
 
 # วิธีใช้
-# เพียงป้อนตำแหน่งของโฟลเดอร์ คำที่ต้องการค้นหา คำที่อยากจะให้แก้ และนามสกุลของไฟล์นั้น ๆ 
+# เพียงแค่ป้อนตำแหน่งของโฟลเดอร์ คำที่ต้องการค้นหา คำที่อยากจะให้แก้ และนามสกุลของไฟล์นั้น ๆ 
 # ไม่ต้องแก้ที่อยู่โฟลเดอร์ในโค้ดแล้วสามารถรันโปรแกรมแล้วใช้งานได้เลย
 
 # Natural sorting functions
@@ -47,7 +47,7 @@ print("Just input Folder paths, the keyword you want to search, the replacement 
 print("No need to edit the folder address in the code, you can run the program and use it right away.")
 print("")
 print("วิธีใช้")
-print("เพียงป้อนตำแหน่งของโฟลเดอร์ คำที่ต้องการค้นหา คำที่อยากจะให้แก้ และนามสกุลของไฟล์นั้น ๆ ")
+print("เพียงแค่ป้อนตำแหน่งของโฟลเดอร์ คำที่ต้องการค้นหา คำที่อยากจะให้แก้ และนามสกุลของไฟล์นั้น ๆ ")
 print("ไม่ต้องแก้ที่อยู่โฟลเดอร์ในโค้ดแล้วสามารถรันโปรแกรมแล้วใช้งานได้เลย")
 print("")
 print("Please set all Foler name to english first")
