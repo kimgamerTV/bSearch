@@ -24,6 +24,10 @@ def atoi(text):
 def natural_keys(text):
     return [atoi(c) for c in re.split(r'(\d+)', text)]
 
+# Convert folder path to raw string
+def to_raw_string(s):
+    return s.encode('unicode_escape').decode()
+
 # Check if tqdm is installed, and if not, install it
 try:
     from tqdm import tqdm
@@ -51,9 +55,6 @@ print("เพียงแค่ป้อนตำแหน่งของโฟ�
 print("ไม่ต้องแก้ที่อยู่โฟลเดอร์ในโค้ดแล้วสามารถรันโปรแกรมแล้วใช้งานได้เลย")
 print("")
 print("Please set all Foler name to english first")
-
-def to_raw_string(s):
-    return s.encode('unicode_escape').decode()
 
 while True:
     path = input("Enter folder path (or 'done' to finish): ")
