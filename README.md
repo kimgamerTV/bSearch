@@ -1,6 +1,9 @@
-# Python version 3.11.5
+# Python version 3.10.x
+# Other version Should be work fine.
 # Code from ChatGPT
 # Made By Bank's : Thai translator H Game
+# Better Search Version is Made By NeCron
+# For Android i dont know is my version work i didn't test 
 # Link Discord : https://discord.gg/q6FkGCHv66
 # สามารถหาคำไทยได้แต่ต้องรันโค้ดผ่านโปรแกรมรันโค้ด เช่น Visual Studio Code
 
